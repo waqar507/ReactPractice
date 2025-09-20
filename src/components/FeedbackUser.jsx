@@ -17,7 +17,7 @@ export default function FeedbackUser({ onRegister }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.name === "" && formData.email === "") {
+        if (formData.name === "" || formData.email === "") {
             setError("Name & Email Fields must have a value");
             return;
         }
@@ -31,7 +31,7 @@ export default function FeedbackUser({ onRegister }) {
             name: '',
             email: '',
             feedback: '',
-            review: ''
+            rating: ''
         });
     }
 
